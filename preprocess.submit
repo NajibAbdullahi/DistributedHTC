@@ -1,0 +1,10 @@
+executable      =   DistributedHTC/Proprocess/preprocess.py
+Output          =   DistributedHTC/Proprocess/output.txt
+Error           =   DistributedHTC/Proprocess/error.txt
+Log             =   DistributedHTC/Proprocess/log.txt
+
+notification=Never
+Arguements=$(Process)
+PeriodicRelease=(JobStatus==5)&&(CurrentTime-EnteredCurrentState>30)
+onExitRemove=(ExitStatus=0)
+Queue

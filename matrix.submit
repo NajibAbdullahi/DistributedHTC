@@ -1,6 +1,0 @@
-executable      =   DistributedHTC/Evalaution/matrix.py
-Output          =   DistributedHTC/Evalaution/output.txt
-Error           =   DistributedHTC/Evalaution/error.txt
-Log             =   DistributedHTC/Evalaution/log.txt
-
-Queue

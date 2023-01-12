@@ -1,0 +1,6 @@
+executable      =   DistributedHTC/Split/split.py
+Output          =   DistributedHTC/Split/output.txt
+Error           =   DistributedHTC/Split/error.txt
+Log             =   DistributedHTC/Split/log.txt
+
+Queue

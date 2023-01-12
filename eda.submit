@@ -1,0 +1,6 @@
+executable      =   DistributedHTC/EDA/eda.py
+Output          =   DistributedHTC/EDA/output.txt
+Error           =   DistributedHTC/EDA/error.txt
+Log             =   DistributedHTC/EDA/log.txt
+
+Queue

@@ -1,0 +1,6 @@
+executable      =   DistributedHTC/Model/compare.py
+Output          =   DistributedHTC/Model/output.txt
+Error           =   DistributedHTC/Model/error.txt
+Log             =   DistributedHTC/Model/log.txt
+
+Queue

@@ -1,0 +1,6 @@
+executable      =   DistributedHTC/Proprocess/preprocess.py
+Output          =   DistributedHTC/Proprocess/output.txt
+Error           =   DistributedHTC/Proprocess/error.txt
+Log             =   DistributedHTC/Proprocess/log.txt
+
+Queue

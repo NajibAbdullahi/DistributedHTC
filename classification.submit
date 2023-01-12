@@ -1,0 +1,6 @@
+executable      =   DistributedHTC/Evalaution/classification.py
+Output          =   DistributedHTC/Evalaution/output.txt
+Error           =   DistributedHTC/Evalaution/error.txt
+Log             =   DistributedHTC/Evalaution/log.txt
+
+Queue

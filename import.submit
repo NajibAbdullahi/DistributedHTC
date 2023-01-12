@@ -1,0 +1,6 @@
+executable      =   DistributedHTC/Data/import.py
+Output          =   DistributedHTC/Data/output.txt
+Error           =   DistributedHTC/Data/error.txt
+Log             =   DistributedHTC/Data/log.txt
+
+Queue

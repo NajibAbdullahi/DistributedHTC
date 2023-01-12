@@ -1,0 +1,6 @@
+executable      =   DistributedHTC/FeatureEng/featureng.py
+Output          =   DistributedHTC/FeatureEng/output.txt
+Error           =   DistributedHTC/FeatureEng/error.txt
+Log             =   DistributedHTC/FeatureEng/log.txt
+
+Queue

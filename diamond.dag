@@ -1,0 +1,16 @@
+JOB     Import      import.submit
+JOB     Proprocess  preprocess.submit
+JOB     EDA         eda.submit
+JOB     Split       split.submit
+JOB     FeatureEng  featureng.submit
+JOB     Model       model.submit
+JOB     Compare     compare.submit
+JOB     Matrix      matrix.submit
+JOB     Classification  classification.submit
+
+PARENT  Import CHILD    Proprocess
+PARENT  Proprocess  CHILD   EDA Split
+PARENT  Split   CHILD   FeatureEng
+PARENT  FeatureEng  CHILD   Model
+PARENT  Model   CHILD   Compare Matrix
+PARENT  Matrix  CHILD   Classification

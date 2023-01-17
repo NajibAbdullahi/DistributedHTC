@@ -1,10 +1,10 @@
-executable      =   DistributedHTC/Model/model.py
-Output          =   DistributedHTC/Model/output.txt
-Error           =   DistributedHTC/Model/error.txt
-Log             =   DistributedHTC/Model/log.txt
+executable      =   DistributedHTC/Model/LogisticRegression/model.py
+Output          =   DistributedHTC/Model/LogisticRegression/output.txt
+Error           =   DistributedHTC/Model/LogisticRegression/error.txt
+Log             =   DistributedHTC/Model/LogisticRegression/log.txt
 
 notification=Never
 Arguements=$(Process)
 PeriodicRelease=(JobStatus==5)&&(CurrentTime-EnteredCurrentState>30)
-onExitRemove=(ExitStatus=0)
+onExitRemove=(ExitStatus==0)
 Queue

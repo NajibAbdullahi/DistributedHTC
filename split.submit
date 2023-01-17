@@ -1,4 +1,4 @@
-executable      =   DistributedHTC/Split/split.py
+executable      =   DistributedHTC/Split/Split.py
 Output          =   DistributedHTC/Split/output.txt
 Error           =   DistributedHTC/Split/error.txt
 Log             =   DistributedHTC/Split/log.txt
@@ -6,5 +6,5 @@ Log             =   DistributedHTC/Split/log.txt
 notification=Never
 Arguements=$(Process)
 PeriodicRelease=(JobStatus==5)&&(CurrentTime-EnteredCurrentState>30)
-onExitRemove=(ExitStatus=0)
+onExitRemove=(ExitStatus==0)
 Queue

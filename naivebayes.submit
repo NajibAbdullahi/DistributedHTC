@@ -1,0 +1,10 @@
+executable      =   DistributedHTC/Model/NaiveBayes/model.py
+Output          =   DistributedHTC/Model/NaiveBayes/output.txt
+Error           =   DistributedHTC/Model/NaiveBayes/error.txt
+Log             =   DistributedHTC/Model/NaiveBayes/log.txt
+
+notification=Never
+Arguements=$(Process)
+PeriodicRelease=(JobStatus==5)&&(CurrentTime-EnteredCurrentState>30)
+onExitRemove=(ExitStatus==0)
+Queue

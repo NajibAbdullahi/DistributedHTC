@@ -1,0 +1,10 @@
+executable      =   DistributedHTC/Model/GradientBoosting/compare.py
+Output          =   DistributedHTC/Model/GradientBoosting/output.txt
+Error           =   DistributedHTC/Model/GradientBoosting/error.txt
+Log             =   DistributedHTC/Model/GradientBoosting/log.txt
+
+notification=Never
+Arguements=$(Process)
+PeriodicRelease=(JobStatus==5)&&(CurrentTime-EnteredCurrentState>30)
+onExitRemove=(ExitStatus==0)
+Queue

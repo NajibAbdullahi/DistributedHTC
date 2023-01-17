@@ -1,0 +1,10 @@
+executable      =   DistributedHTC/Evalaution/NaiveBayes/matrix.py
+Output          =   DistributedHTC/Evalaution/NaiveBayes/output.txt
+Error           =   DistributedHTC/Evalaution/NaiveBayes/error.txt
+Log             =   DistributedHTC/Evalaution/NaiveBayes/log.txt
+
+notification=Never
+Arguements=$(Process)
+PeriodicRelease=(JobStatus==5)&&(CurrentTime-EnteredCurrentState>30)
+onExitRemove=(ExitStatus==0)
+Queue

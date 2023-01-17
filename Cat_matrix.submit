@@ -1,0 +1,10 @@
+executable      =   DistributedHTC/Evalaution/Cat/matrix.py
+Output          =   DistributedHTC/Evalaution/Cat/output.txt
+Error           =   DistributedHTC/Evalaution/Cat/error.txt
+Log             =   DistributedHTC/Evalaution/Cat/log.txt
+
+notification=Never
+Arguements=$(Process)
+PeriodicRelease=(JobStatus==5)&&(CurrentTime-EnteredCurrentState>30)
+onExitRemove=(ExitStatus==0)
+Queue

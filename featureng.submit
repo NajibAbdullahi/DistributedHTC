@@ -1,4 +1,4 @@
-executable      =   DistributedHTC/FeatureEng/featureng.py
+executable      =   DistributedHTC/FeatureEng/featureeng.py
 Output          =   DistributedHTC/FeatureEng/output.txt
 Error           =   DistributedHTC/FeatureEng/error.txt
 Log             =   DistributedHTC/FeatureEng/log.txt
@@ -6,5 +6,5 @@ Log             =   DistributedHTC/FeatureEng/log.txt
 notification=Never
 Arguements=$(Process)
 PeriodicRelease=(JobStatus==5)&&(CurrentTime-EnteredCurrentState>30)
-onExitRemove=(ExitStatus=0)
+onExitRemove=(ExitStatus==0)
 Queue

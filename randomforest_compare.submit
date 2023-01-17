@@ -1,0 +1,10 @@
+executable      =   DistributedHTC/Model/RandomForest/compare.py
+Output          =   DistributedHTC/Model/RandomForest/output.txt
+Error           =   DistributedHTC/Model/RandomForest/error.txt
+Log             =   DistributedHTC/Model/RandomForest/log.txt
+
+notification=Never
+Arguements=$(Process)
+PeriodicRelease=(JobStatus==5)&&(CurrentTime-EnteredCurrentState>30)
+onExitRemove=(ExitStatus==0)
+Queue

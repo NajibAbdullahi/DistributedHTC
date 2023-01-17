@@ -20,14 +20,22 @@ JOB     CatCompare     Cat_compare.submit
 JOB     CatMatrix      Cat_matrix.submit
 JOB     CatClassification  Cat_classification.submit
 PARENT Import CHILD Proprocess
-PARENT Proprocess CHILD EDA Split
+PARENT Proprocess CHILD 
+PARENT EDA CHILD Split
 PARENT Split CHILD FeatureEng
-PARENT FeatureEng CHILD LogModel NBModel RFModel CatModel
-PARENT LogModel Child Compare Matrix
-PARENT Matrix CHILD Classification 
-PARENT NBModel CHILD NBCompare NBMatrix
+PARENT FeatureEng CHILD LogModel
+PARENT LogModel CHILD Compare
+PARENT Compare CHILD Matrix
+PARENT Matrix CHILD Classification
+PARENT Classification CHILD NBModel
+PARENT NBModel CHILD NBCompare
+PARENT NBCompare CHILD NBMatrix
 PARENT NBMatrix CHILD NBClassification
-PARENT RFModel CHILD RFCompare RFMatrix
-PARENT RFMatrix CHILD RFClassification 
-PARENT CatModel CHILD CatCompare CatMatrix
-PARENT CatMatrix CHILD  CatClassification
+PARENT NBClassification CHILD RFModel
+PARENT RFModel CHILD RFCompare
+PARENT RFCompare CHILD RFMatrix
+PARENT RFMatrix CHILD RFClassification
+PARENT RFClassification CHILD CatModel
+PARENT CatModel CHILD CatCompare
+PARENT CatCompare CHILD CatMatrix
+PARENT CatMatrix CHILD CatClassification

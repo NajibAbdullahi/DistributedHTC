@@ -1,0 +1,10 @@
+executable      =   DistributedHTC/Model/Cat/model.py
+Output          =   DistributedHTC/Model/Cat/output.txt
+Error           =   DistributedHTC/Model/Cat/error.txt
+Log             =   DistributedHTC/Model/Cat/log.txt
+
+notification=Never
+Arguements=$(Process)
+PeriodicRelease=(JobStatus==5)&&(CurrentTime-EnteredCurrentState>30)
+onExitRemove=(ExitStatus==0)
+Queue

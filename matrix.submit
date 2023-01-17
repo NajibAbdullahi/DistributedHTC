@@ -1,10 +1,10 @@
-executable      =   DistributedHTC/Evalaution/matrix.py
-Output          =   DistributedHTC/Evalaution/output.txt
-Error           =   DistributedHTC/Evalaution/error.txt
-Log             =   DistributedHTC/Evalaution/log.txt
+executable      =   DistributedHTC/Evalaution/LogisticRegression/matrix.py
+Output          =   DistributedHTC/Evalaution/LogisticRegression/output.txt
+Error           =   DistributedHTC/Evalaution/LogisticRegression/error.txt
+Log             =   DistributedHTC/Evalaution/LogisticRegression/log.txt
 
 notification=Never
 Arguements=$(Process)
 PeriodicRelease=(JobStatus==5)&&(CurrentTime-EnteredCurrentState>30)
-onExitRemove=(ExitStatus=0)
+onExitRemove=(ExitStatus==0)
 Queue

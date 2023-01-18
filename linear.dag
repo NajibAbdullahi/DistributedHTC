@@ -19,8 +19,15 @@ JOB     CatModel    Cat.submit
 JOB     CatCompare     Cat_compare.submit
 JOB     CatMatrix      Cat_matrix.submit
 JOB     CatClassification  Cat_classification.submit
+JOB     AccuracyComp        Accuracy_comp.submit
+JOB     BalancedAccComp      ba_comp.submit
+JOB     RecallComp     Recall_comp.submit
+JOB     Precision     Precision_comp.submit
+JOB     F1             F1_comp.submit
+JOB    Time         time_comp.submit
+JOB     OverallComp      overall_comp.submit
 PARENT Import CHILD Proprocess
-PARENT Proprocess CHILD 
+PARENT Proprocess CHILD EDA
 PARENT EDA CHILD Split
 PARENT Split CHILD FeatureEng
 PARENT FeatureEng CHILD LogModel
@@ -39,3 +46,10 @@ PARENT RFClassification CHILD CatModel
 PARENT CatModel CHILD CatCompare
 PARENT CatCompare CHILD CatMatrix
 PARENT CatMatrix CHILD CatClassification
+PARENT CatClassification CHILD AccuracyComp
+PARENT AccuracyComp CHILD BalancedAccComp
+PARENT BalancedAccComp CHILD RecallComp
+PARENT RecallComp CHILD Precision
+PARENT Precision CHILD F1
+PARENT F1 CHILD Time
+PARENT Time CHILD OverallComp

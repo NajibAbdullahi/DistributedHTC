@@ -15,19 +15,22 @@ JOB     RFModel    randomforest.submit
 JOB     RFCompare     randomforest_compare.submit
 JOB     RFMatrix      randomforest_matrix.submit
 JOB     RFClassification  randomforest_classification.submit
-JOB     CatModel    Cat.submit
-JOB     CatCompare     Cat_compare.submit
-JOB     CatMatrix      Cat_matrix.submit
-JOB     CatClassification  Cat_classification.submit
+JOB     AccuracyComp        Accuracy_comp.submit
+JOB     BalancedAccComp      ba_comp.submit
+JOB     RecallComp     Recall_comp.submit
+JOB     Precision     Precision_comp.submit
+JOB     F1             F1_comp.submit
+JOB    Time         time_comp.submit
+JOB     OverallComp      overall_comp.submit
 PARENT Import CHILD Proprocess
 PARENT Proprocess CHILD EDA Split
 PARENT Split CHILD FeatureEng
-PARENT FeatureEng CHILD LogModel NBModel RFModel CatModel
+PARENT FeatureEng CHILD LogModel NBModel RFModel 
 PARENT LogModel Child Compare Matrix
-PARENT Matrix CHILD Classification 
+PARENT Matrix CHILD Classification
 PARENT NBModel CHILD NBCompare NBMatrix
 PARENT NBMatrix CHILD NBClassification
 PARENT RFModel CHILD RFCompare RFMatrix
-PARENT RFMatrix CHILD RFClassification 
-PARENT CatModel CHILD CatCompare CatMatrix
-PARENT CatMatrix CHILD  CatClassification
+PARENT RFMatrix CHILD RFClassification
+PARENT Classification NBClassification RFClassification  CHILD AccuracyComp BalancedAccComp RecallComp Precision F1 Time
+PARENT AccuracyComp BalancedAccComp RecallComp Precision F1 Time CHILD OverallComp

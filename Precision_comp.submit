@@ -1,0 +1,10 @@
+executable      =   DistributedHTC/Evalaution/precision_compariosn.py
+Output          =   DistributedHTC/Evalaution/output2.txt
+Error           =   DistributedHTC/Evalaution/error2.txt
+Log             =   DistributedHTC/Evalaution/log2.txt
+
+notification=Never
+Arguements=$(Process)
+PeriodicRelease=(JobStatus==5)&&(CurrentTime-EnteredCurrentState>30)
+onExitRemove=(ExitStatus==0)
+Queue

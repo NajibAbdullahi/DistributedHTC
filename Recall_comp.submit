@@ -1,0 +1,10 @@
+executable      =   DistributedHTC/Evalaution/recall_accuracy_comparison.py
+Output          =   DistributedHTC/Evalaution/output3.txt
+Error           =   DistributedHTC/Evalaution/error3.txt
+Log             =   DistributedHTC/Evalaution/log3.txt
+
+notification=Never
+Arguements=$(Process)
+PeriodicRelease=(JobStatus==5)&&(CurrentTime-EnteredCurrentState>30)
+onExitRemove=(ExitStatus==0)
+Queue
